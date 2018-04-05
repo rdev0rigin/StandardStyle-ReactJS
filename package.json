@@ -4,20 +4,23 @@
   "private": true,
   "dependencies": {
     "@reactivex/rxjs": "^5.5.6",
+    "bootstrap": "^4.0.0",
     "react": "^16.3.0",
+    "react-color": "^2.14.0",
     "react-dom": "^16.3.0",
     "react-router-dom": "^4.2.2",
     "react-scripts-ts": "2.14.0"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
+    "start": "sass src/index.scss --watch & react-scripts-ts start",
+    "build": "sass src/index.scss && react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
     "@firebase/app-types": "^0.1.2",
     "@types/jest": "^22.2.2",
+    "@types/react-color": "^2.13.4",
     "@types/node": "^9.6.2",
     "@types/react": "^16.3.3",
     "@types/react-dom": "^16.0.4",

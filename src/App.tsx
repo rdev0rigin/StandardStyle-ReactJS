@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Route } from 'react-router';
 import { BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
 import { ButtonComponent } from './components/button/button.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
@@ -14,30 +13,38 @@ class App extends React.Component {
 			<Router>
 				<div className="App">
 					<header className="App-header">
-						<img src={logo} className="App-logo" alt="logo"/>
-						<h1 className="App-title">Standard Style</h1>
+						<img
+							src={logo}
+							className="App-logo"
+							alt="logo"
+						/>
+						<h1 className="App-title">{'{ Standard Style }'}</h1>
 					</header>
 					<div
-						className="content"
+						className="main-layout"
 					>
 						<SideBarComponent/>
-						<Route
-							path="/"
-							exact={true}
-							component={LandingComponent}
-						/>
-						<Route
-							path="/button"
-							render={() => {
-								return (<ButtonComponent/>);
-							}}
-						/>
-						<Route
-							path="/background"
-							render={() => {
-								return (<ButtonComponent/>);
-							}}
-						/>
+						<div
+							className="content"
+						>
+							<Route
+								path="/"
+								exact={true}
+								component={LandingComponent}
+							/>
+							<Route
+								path="/button"
+								render={() => {
+									return (<ButtonComponent/>);
+								}}
+							/>
+							<Route
+								path="/background"
+								render={() => {
+									return (<ButtonComponent/>);
+								}}
+							/>
+						</div>
 					</div>
 				</div>
 			</Router>

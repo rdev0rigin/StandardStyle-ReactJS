@@ -5,7 +5,9 @@ import {
 
 export const NavigationLinks = (props: {links: {}[]}) => {
 	return (
-		<div>
+		<div
+			className="navigation-links"
+		>
 			{props.links.map( (link: {title: string, route: string} ) => {
 				return (
 					<React.Fragment
@@ -15,11 +17,11 @@ export const NavigationLinks = (props: {links: {}[]}) => {
 							to={link.route}
 							className="navigation-links"
 						>
-							I am a link {link.title}
+							{link.title}
 						</Link>
 					</React.Fragment>
 				);
-			})};
+			})}
 		</div>
 	);
 };
@@ -29,7 +31,6 @@ export const SideBarComponent = () => {
 		<div
 			className="side-bar-component"
 		>
-			<input type="search" />
 			<NavigationLinks
 				links={[{title: 'Button', route: 'button'}, {title: 'Background', route: 'background'}]}
 			/>
