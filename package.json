@@ -9,7 +9,8 @@
     "react-color": "^2.14.0",
     "react-dom": "^16.3.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts-ts": "2.14.0"
+    "react-scripts-ts": "2.14.0",
+    "firebase": "^4.9.1"
   },
   "scripts": {
     "start": "sass src/index.scss --watch & react-scripts-ts start",

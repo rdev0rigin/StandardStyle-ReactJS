@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Route } from 'react-router';
+import { Route, Link } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ButtonComponent } from './components/button/button.component';
 import { LandingComponent } from './components/landing/landing.component';
@@ -12,14 +12,26 @@ class App extends React.Component {
 		return (
 			<Router>
 				<div className="App">
-					<header className="App-header">
+					<Link
+						to={'/'}
+						className="App-header"
+					>
+						<span
+							className="header-logo"
+						>
+							{'{standard-style:'}
+						</span>
 						<img
 							src={logo}
 							className="App-logo"
 							alt="logo"
 						/>
-						<h1 className="App-title">{'{ Standard Style }'}</h1>
-					</header>
+						<span
+							className="header-logo"
+						>
+							{'}'}
+						</span>
+					</Link>
 					<div
 						className="main-layout"
 					>

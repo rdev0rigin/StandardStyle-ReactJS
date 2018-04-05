@@ -3,9 +3,13 @@
 
 .App-logo {
   animation: App-logo-spin infinite 10s linear;
-  height: 80px; }
+  height: 100%; }
 
 .App-header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction: row;
   background-color: #222;
   height: 150px;
   padding: 20px;
@@ -22,6 +26,9 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+.header-logo {
+  font-size: 4em; }
+
 .main-layout {
   display: grid;
   grid-template-rows: 100%;
@@ -48,30 +55,6 @@
     flex-direction: row;
     justify-content: space-around; }
 
-.App {
-  text-align: center; }
-
-.App-logo {
-  animation: App-logo-spin infinite 10s linear;
-  height: 80px; }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white; }
-
-.App-title {
-  font-size: 1.5em; }
-
-.App-intro {
-  font-size: large; }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
 .side-bar-component .navigation-links {
   display: flex;
   flex-direction: column;

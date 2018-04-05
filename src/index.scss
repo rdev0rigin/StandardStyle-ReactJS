@@ -4,10 +4,14 @@
 
 .App-logo {
   animation: App-logo-spin infinite 10s linear;
-  height: 80px;
+  height: 100%;
 }
 
 .App-header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction: row;
   background-color: #222;
   height: 150px;
   padding: 20px;
@@ -27,6 +31,10 @@
   to { transform: rotate(360deg); }
 }
 
+.header-logo {
+  font-size: 4em;
+}
+
 .main-layout {
   display: grid;
   grid-template-rows: 100%;
@@ -37,10 +45,10 @@
 .content {
   grid-area: content;
 }
+
 .side-bar-component {
   grid-area: sidebar;
 }
 
 @import './components/button/button.style';
-@import './app.style';
 @import './components/side-bar/side-bar.style';
