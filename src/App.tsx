@@ -5,7 +5,12 @@ import { ButtonComponent } from './components/button/button.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 
-const logo = require('./logo.svg');
+const logo = {
+	svg: require('./logo.svg'),
+	leftCurly: '{',
+	rightCurly: '}',
+	title: 'standard-style:'
+};
 
 class App extends React.Component {
 	render() {
@@ -19,17 +24,17 @@ class App extends React.Component {
 						<span
 							className="header-logo"
 						>
-							{'{standard-style:'}
+							{logo.leftCurly + logo.title}
 						</span>
 						<img
-							src={logo}
+							src={logo.svg}
 							className="App-logo"
 							alt="logo"
 						/>
 						<span
 							className="header-logo"
 						>
-							{'}'}
+							{logo.rightCurly}
 						</span>
 					</Link>
 					<div

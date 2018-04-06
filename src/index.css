@@ -1,3 +1,8 @@
+a {
+  text-decoration: none; }
+  a:hover, a:visited, a:focus {
+    text-decoration: none; }
+
 .App {
   text-align: center; }
 
@@ -27,7 +32,9 @@
   to {
     transform: rotate(360deg); } }
 .header-logo {
-  font-size: 4em; }
+  font-size: 4em;
+  display: flex;
+  flex-wrap: nowrap; }
 
 .main-layout {
   display: grid;
